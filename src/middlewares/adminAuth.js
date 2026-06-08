@@ -23,9 +23,10 @@ function authAdmin(req, res, next) {
     req.admin = decoded;
 
     next();
-  } catch {
+  } catch (err) {
     return res.status(401).json({
-      error: "Token inválido",
+      error:
+        err.name === "TokenExpiredError" ? "Token expirado" : "Token inválido",
     });
   }
 }
