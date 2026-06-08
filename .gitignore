@@ -1,0 +1,93 @@
+# Dependências
+
+node_modules/
+
+# Logs
+
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Variáveis de ambiente
+
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Build
+
+dist/
+build/
+
+# Vite
+
+.vite/
+
+# Coverage
+
+coverage/
+
+# Cache
+
+.cache/
+.parcel-cache/
+
+# Sistema Operacional
+
+.DS_Store
+Thumbs.db
+
+# IDEs
+
+.vscode/
+.idea/
+
+# Arquivos temporários
+
+tmp/
+temp/
+
+# MongoDB local
+
+*.mongodb
+
+# Uploads (opcional)
+
+uploads/audio/*
+
+# Manter a pasta no git
+
+!uploads/audio/.gitkeep
+
+# Arquivos compactados
+
+*.zip
+*.tar
+*.gz
+*.rar
+
+# Certificados
+
+*.pem
+*.key
+*.crt
+
+# ESLint Cache
+
+.eslintcache
+
+# Docker
+
+.docker/
+
+# Runtime
+
+pids
+*.pid
+*.seed
+*.pid.lock
