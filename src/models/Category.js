@@ -76,6 +76,11 @@ const CategorySchema = new mongoose.Schema(
       required: true,
     },
 
+    backgroundImage: {
+      type: String,
+      default: "",
+    },
+
     attributes: {
       type: [AttributeSchema],
       default: [],

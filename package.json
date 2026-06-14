@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "concurrently \"npm run backend\" \"npm run frontend\"",
-    "dev": "nodemon src/server.js",
+    "start": "node src/server.js",
+    "dev": "concurrently \"npm run backend\" \"npm run frontend\"",
     "backend": "nodemon src/server.js",
     "frontend": "npm run dev --prefix dle-front"
   },
