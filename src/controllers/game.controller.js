@@ -13,7 +13,7 @@ exports.startGame = async (req, res) => {
 
 exports.getModes = async (req, res) => {
   try {
-    const result = await gameService.getModes(req.params.categoryId).lean();
+    const result = await gameService.getModes(req.params.categoryId);
 
     return res.json(result);
   } catch (error) {
