@@ -29,13 +29,13 @@ exports.updateCategory = async (req, res) => {
 };
 
 exports.getCategories = async (req, res) => {
-  const categories = await Category.find();
+  const categories = await Category.find().lean();
 
   res.json(categories);
 };
 
 exports.getCategory = async (req, res) => {
-  const category = await Category.findById(req.params.id);
+  const category = await Category.findById(req.params.id).lean();
 
   res.json(category);
 };
@@ -78,7 +78,9 @@ exports.getEntities = async (req, res) => {
       filter.categoryId = req.query.categoryId;
     }
 
-    const entities = await Entity.find(filter).sort({ name: 1, createdAt: 1 });
+    const entities = await Entity.find(filter)
+      .sort({ name: 1, createdAt: 1 })
+      .lean();
 
     res.json(entities);
   } catch (error) {
@@ -90,7 +92,7 @@ exports.getEntities = async (req, res) => {
 
 exports.getEntityById = async (req, res) => {
   try {
-    const entity = await Entity.findById(req.params.id);
+    const entity = await Entity.findById(req.params.id).lean();
 
     if (!entity) {
       return res.status(404).json({

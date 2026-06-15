@@ -27,5 +27,6 @@ const EntitySchema = new mongoose.Schema(
     timestamps: true,
   },
 );
-
+EntitySchema.index({ categoryId: 1 });
+EntitySchema.index({ name: 1 });
 module.exports = mongoose.model("Entity", EntitySchema);

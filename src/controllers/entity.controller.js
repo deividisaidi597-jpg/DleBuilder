@@ -13,7 +13,8 @@ exports.search = async (req, res) => {
       _id: 1,
       name: 1,
       "modeData.splash": 1,
-    });
+    })
+    .lean();
 
   res.json(entities);
 };
