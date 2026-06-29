@@ -1,0 +1,16 @@
+@keyframes revealCell {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal-cell {
+  opacity: 0;
+  animation: revealCell 0.35s ease forwards;
+}
